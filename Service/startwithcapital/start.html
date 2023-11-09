@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input="hello hii"
+        var result= capitalfunction(input)
+        
+
+        function capitalfunction(str){
+            var words = str.split(" ");
+            for (var i = 0; i < words.length; i++) {
+            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            return words.join(" ");
+        }
+        console.log(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="border:2px solid green; background-color: green;">
+
+
+
+    <div id="parent" style="padding: 20px; border:2px solid yellow; background-color: yellow;">
+        <div id="child" style="padding: 20px; border:2px solid red; background-color: red;">
+            
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        // event.stopPropagation();  // Used to stop event propagation.
+
+        const parentDiv=document.getElementById('parent');
+        const childDiv=document.getElementById('child');
+
+        const bodyE=document.querySelector('body');
+        console.log(bodyE);
+
+        function parentHandler(){
+            
+            console.log("Parent Got Clicked");
+        }
+
+        function childHandler(){
+            
+            console.log("Child Got Clicked");
+        }
+
+        function bodyHandler(){
+            //Stop propogation form child to parent and parent to child.
+            event.stopPropagation();
+            console.log("Body Got Clicked");
+        }
+        //                         (Event,Bubbling     ,Capturing)
+        parentDiv.addEventListener('click',parentHandler,true);
+        childDiv.addEventListener('click',childHandler,true);
+        bodyE.addEventListener('click',bodyHandler,true);
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Form></Form></title>
+</head>
+<body>
+ 
+        <label for="uname">Username</label>
+        <input type="text" id="uname">
+
+        <label for="upass">Password</label>
+        <input type="text" id="upass">
+
+        <button id="mybutton">Submit</button>
+
+<script>
+        let user=document.getElementById("mybutton")
+        function UserRegistration(){
+            var name=document.getElementById("uname").value;
+            var pass=document.getElementById("upass").value;
+
+            console.log(name);
+            console.log(pass);
+    };
+user.addEventListener('click',UserRegistration)
+    </script>
+</body>
+</html>
